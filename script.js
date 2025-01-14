@@ -1,14 +1,23 @@
-import {
-  greet,
-  celsiusToFahrenheit,
-  calculateFallDistance,
-  calculateAverage,
-  concatStrings,
-} from "./modules.js";
+import { greet } from "./modules/greet.js";
 
 greet("Дмитрий");
 
-// Пример использования функции для конвертации температур
+import { celsiusToFahrenheit } from "./modules/celsiusToFahrenheit.js";
+
+console.log(celsiusToFahrenheit(20));
+
+import { calculateFallDistance } from "./modules/calculateFallDistance.js";
+
+console.log(calculateFallDistance(5));
+
+import { calculateAverage } from "./modules/calculateAverage.js";
+
+console.log(calculateAverage(45, 50, 65));
+
+import { concatStrings } from "./modules/concatStrings.js";
+
+console.log(concatStrings("Первое", "слово"));
+
 const celsius = 25;
 const fahrenheit = celsiusToFahrenheit(celsius);
 console.log("${celsius}°C = ${fahrenheit}°F");
@@ -18,10 +27,3 @@ const time = 3; // время в секундах
 const distance = calculateFallDistance(time);
 console.log("Объект упал на расстояние: ${distance} м");
 
-// Пример использования функции для расчета среднего
-const average = calculateAverage(5, 10, 15);
-console.log("Среднее значение: ${average}");
-
-// Пример использования функции для конкатенации строк
-const result = concatStrings("Привет", "Мир");
-console.log(result);
